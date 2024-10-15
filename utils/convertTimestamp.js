@@ -1,7 +1,11 @@
 const { format } = require('date-fns');
 
 const formatDateToCustomString = (date) => {
-    return format(date, 'yyyyMMddHHmmss');
+    return format(date, 'yyMMddHHmmss');
 }
 
-module.exports = { formatDateToCustomString }
+const getOnlyYY = (date) => {
+    return format(date, 'yy')
+}
+
+module.exports = { formatDateToCustomString, getOnlyYY }
