@@ -20,7 +20,7 @@ const processInsertAlgMatindok = async () => {
         // console.log('setAteH and setAteHH', setAteH + ' and ' + setAteHH)
 
         const filterResult = outputRealtimeDonggi
-            .filter(result => result.tname.match(/^L\d{3}_T\d{2}$/));
+            .filter(result => result.tname.match(/^L\d{2}_T\d{2}$/));
 
         for (const item of filterResult) {
             
