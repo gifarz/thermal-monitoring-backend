@@ -10,9 +10,10 @@ const { processInsertAlgDonggi } = require('./services/scheduler/processInsertAl
 // MATINDOK SITE
 const getRealtimeMatindok = require('./routes/matindok/getRealtime')
 const postAlgMatindok = require('./routes/matindok/postAlg');
+const { processInsertAlgMatindok } = require('./services/scheduler/processInsertAlgMatindok');
 
 const app = express();
-const port = 3001;
+const port = 3003;
 
 // Middleware to parse JSON requests
 app.use(bodyParser.json());
@@ -28,7 +29,8 @@ app.use('/api/matindok', postAlgMatindok);
 // Cron job to run every 5 seconds
 cron.schedule('*/5 * * * * *', () => {
     // Call the postAlgDonggi function inside the cron job
-    processInsertAlgDonggi() // Ensure this function works correctly when called directly
+    processInsertAlgDonggi()
+    processInsertAlgMatindok()
     // console.log('Cron job triggered: postAlgDonggi');
 });
 
