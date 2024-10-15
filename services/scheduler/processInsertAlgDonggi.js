@@ -17,7 +17,7 @@ const processInsertAlgDonggi = async () => {
         const setAteH = outputRealtimeDonggi.find(result => result.tname == 'Set_ATE_H')?.tvalue;
         const setAteHH = outputRealtimeDonggi.find(result => result.tname == 'Set_ATE_HH')?.tvalue;
 
-        // console.log('setAteH and setAteHH', setAteH + ' and ' + setAteHH)
+        console.log('setAteH and setAteHH', setAteH + ' and ' + setAteHH)
 
         const filterResult = outputRealtimeDonggi
             .filter(result => result.tname.match(/^L\d{3}_T\d{2}$/));

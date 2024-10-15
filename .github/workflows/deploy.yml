@@ -32,7 +32,7 @@ jobs:
         USERNAME: root
         TARGET_DIR: /var/www/thermal-monitoring-backend
         APP_NAME: thermal-monitoring-backend #should match the name of the server block
-        PORT: 3001
+        PORT: 3002
         #if multiple deploys are needed from different branches
         #TARGET_DIR: ${{ github.ref == 'refs/heads/deploytest' && '/var/www/folder_name' || github.ref == 'refs/heads/deployprod' && '/var/www/another-location' }}
         #APP_NAME: ${{ github.ref == 'refs/heads/deploytest' && 'folder_name' || github.ref == 'refs/heads/deployprod' && 'folder_name_2' }}
