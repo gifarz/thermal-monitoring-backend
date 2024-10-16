@@ -32,18 +32,17 @@ jobs:
         USERNAME: root
         TARGET_DIR: /var/www/thermal-monitoring-backend
         APP_NAME: thermal-monitoring-backend #should match the name of the server block
-        PORT: 3002
+        PORT: 3003
         #if multiple deploys are needed from different branches
         #TARGET_DIR: ${{ github.ref == 'refs/heads/deploytest' && '/var/www/folder_name' || github.ref == 'refs/heads/deployprod' && '/var/www/another-location' }}
         #APP_NAME: ${{ github.ref == 'refs/heads/deploytest' && 'folder_name' || github.ref == 'refs/heads/deployprod' && 'folder_name_2' }}
-        #PORT: ${{ github.ref == 'refs/heads/deploytest' && '3000' || github.ref == 'refs/heads/deployprod' && '3001' }}
+        #PORT: ${{ github.ref == 'refs/heads/deploytest' && '3003' || github.ref == 'refs/heads/deployprod' && '3003' }}
       run: |
         ssh -o StrictHostKeyChecking=no $USERNAME@$HOST << EOF
           export PATH=/root/.nvm/versions/node/v20.17.0/bin:$PATH #'which pm2' command on terminal will give the right path
           cd $TARGET_DIR
           git pull origin ${GITHUB_REF#refs/heads/}
           npm install
-          npm run build
           if pm2 list | grep -q $APP_NAME; then
             echo "Restarting application: $APP_NAME"
             pm2 restart $APP_NAME
