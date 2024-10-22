@@ -5,7 +5,7 @@ const { selectTbAlarmsMatindok } = require('../query/matindok/selectTbAlarmsMati
 const { checkExistTable } = require('../query/general/checkExistTable');
 const { createTable } = require('../query/general/createTable');
 
-const redisCheckState = require('../../utils/redisCheckState');
+const { redisCheckState } = require('../../utils/redisValidation');
 
 const processInsertAlgMatindok = async () => {
     let alarmStatus = null;
@@ -70,13 +70,16 @@ const processInsertAlgMatindok = async () => {
                 // Convert Timestamp
                 const timestamp = formatDateToCustomString(currentDate);
 
-                const outputRedisCheckState = await redisCheckState(item.tname, alarmStatus)
+                const outputRedisCheckState = await redisCheckState(item.tname, alarmStatus, alarmId, timestamp)
 
                 // If outputRedisCheckState is true then do the insert 
                 if(outputRedisCheckState){
 
+                    const fixedAlarmStatus = alarmStatus == 'Danger' || alarmStatus == 'Warning' ? 
+                    'Active' : 'Normal'
+
                     // Call query insert to Alg table
-                    await insertAlgMatindok(timestamp, alarmId, alarmStatus, tableName);
+                    await insertAlgMatindok(timestamp, alarmId, fixedAlarmStatus, tableName);
                 }
 
             }
