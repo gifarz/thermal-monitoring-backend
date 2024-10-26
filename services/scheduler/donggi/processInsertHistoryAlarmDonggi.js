@@ -1,12 +1,12 @@
-const { selectRealtimeDonggi } = require('../query/donggi/selectRealtimeDonggi');
-const { formatDateToCustomString, getOnlyYY } = require('../../utils/convertTimestamp');
-const { selectTbAlarmsDonggi } = require('../query/donggi/selectTbAlarmsDonggi');
-const { selectTbTagsDonggi } = require("../query/donggi/selectTbTagsDonggi")
-const { checkExistTable } = require('../query/general/checkExistTable');
-const { createTable } = require('../query/general/createTable');
+const { selectRealtimeDonggi } = require('../../query/donggi/selectRealtimeDonggi');
+const { formatDateToCustomString, getOnlyYY } = require('../../../utils/convertTimestamp');
+const { selectTbAlarmsDonggi } = require('../../query/donggi/selectTbAlarmsDonggi');
+const { selectTbTagsDonggi } = require("../../query/donggi/selectTbTagsDonggi")
+const { checkExistTable } = require('../../query/general/checkExistTable');
+const { createTable } = require('../../query/general/createTable');
 
-const { redisCheckState, redisAllKeys } = require('../../utils/redisValidation');
-const { insertHistoryAlarmDonggi } = require('../query/donggi/insertHistoryAlarm');
+const { redisCheckState, redisAllKeys } = require('../../../utils/redisValidation');
+const { insertHistoryAlarmDonggi } = require('../../query/donggi/insertHistoryAlarm');
 
 const processInsertHistoryAlarmDonggi = async () => {
     let alarmStatus = null;

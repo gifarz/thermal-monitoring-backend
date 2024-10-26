@@ -1,12 +1,12 @@
-const { selectRealtimeMatindok } = require('../query/matindok/selectRealtimeMatindok');
-const { formatDateToCustomString, getOnlyYY } = require('../../utils/convertTimestamp');
-const { selectTbAlarmsMatindok } = require('../query/matindok/selectTbAlarmsMatindok');
-const { selectTbTagsMatindok } = require("../query/matindok/selectTbTagsMatindok")
-const { checkExistTable } = require('../query/general/checkExistTable');
-const { createTable } = require('../query/general/createTable');
+const { selectRealtimeMatindok } = require('../../query/matindok/selectRealtimeMatindok');
+const { formatDateToCustomString, getOnlyYY } = require('../../../utils/convertTimestamp');
+const { selectTbAlarmsMatindok } = require('../../query/matindok/selectTbAlarmsMatindok');
+const { selectTbTagsMatindok } = require("../../query/matindok/selectTbTagsMatindok")
+const { checkExistTable } = require('../../query/general/checkExistTable');
+const { createTable } = require('../../query/general/createTable');
 
-const { redisCheckState, redisAllKeys } = require('../../utils/redisValidation');
-const { insertHistoryAlarMatindok } = require('../query/matindok/insertHistoryAlarm');
+const { redisCheckState, redisAllKeys } = require('../../../utils/redisValidation');
+const { insertHistoryAlarmMatindok } = require('../../query/matindok/insertHistoryAlarm');
 
 const processInsertHistoryAlarmMatindok = async () => {
     let alarmStatus = null;
@@ -32,6 +32,11 @@ const processInsertHistoryAlarmMatindok = async () => {
         const outputTbTagsMatindok = await selectTbTagsMatindok()
         const isExistTable = await checkExistTable(dbName, tableName) // Check if the table is exist or not
 
+        // console.log('outputRealtimeMatindok', outputRealtimeMatindok)
+        // console.log('outputTbAlarmsMatindok', outputTbAlarmsMatindok)
+        // console.log('outputTbTagsMatindok', outputTbTagsMatindok)
+        // console.log('isExistTable', isExistTable)
+
         // GET ALL KEYS FOR VALIDATING ALARMID IN NORMAL CONDITION
         const outputRedisAllKeys = await redisAllKeys()
 
@@ -51,7 +56,7 @@ const processInsertHistoryAlarmMatindok = async () => {
         // console.log('setAteH and setAteHH', setAteH + ' and ' + setAteHH)
 
         const filterResult = outputRealtimeMatindok
-            .filter(result => result.tname.match(/^L\d{3}_T\d{2}$/));
+            .filter(result => result.tname.match(/^L\d{2}_T\d{2}$/));
 
         for (const item of filterResult) {
 

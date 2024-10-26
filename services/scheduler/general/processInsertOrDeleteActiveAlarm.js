@@ -1,18 +1,18 @@
-const { redisAllKeys } = require("../../utils/redisValidation")
+const { redisAllKeys } = require("../../../utils/redisValidation")
 
-const { deleteActiveAlarmDonggi } = require("../query/donggi/deleteActiveAlarm")
-const { insertActiveAlarmDonggi } = require("../query/donggi/insertActiveAlarm")
-const { selectActiveAlarmDonggi } = require("../query/donggi/selectActiveAlarm")
-const { selectTbAlarmsDonggi } = require("../query/donggi/selectTbAlarmsDonggi")
-const { selectTbTagsDonggi } = require("../query/donggi/selectTbTagsDonggi")
-const { updateActiveAlarmDonggi } = require("../query/donggi/updateActiveAlarm")
+const { deleteActiveAlarmDonggi } = require("../../query/donggi/deleteActiveAlarm")
+const { insertActiveAlarmDonggi } = require("../../query/donggi/insertActiveAlarm")
+const { selectActiveAlarmDonggi } = require("../../query/donggi/selectActiveAlarm")
+const { selectTbAlarmsDonggi } = require("../../query/donggi/selectTbAlarmsDonggi")
+const { selectTbTagsDonggi } = require("../../query/donggi/selectTbTagsDonggi")
+const { updateActiveAlarmDonggi } = require("../../query/donggi/updateActiveAlarm")
 
-const { selectTbAlarmsMatindok } = require("../query/matindok/selectTbAlarmsMatindok")
-const { selectTbTagsMatindok } = require("../query/matindok/selectTbTagsMatindok")
-const { selectActiveAlarmMatindok } = require("../query/matindok/selectActiveAlarm")
-const { updateActiveAlarmMatindok } = require("../query/matindok/updateActiveAlarm")
-const { deleteActiveAlarmMatindok } = require("../query/matindok/deleteActiveAlarm")
-const { insertActiveAlarmMatindok } = require("../query/matindok/insertActiveAlarm")
+const { selectTbAlarmsMatindok } = require("../../query/matindok/selectTbAlarmsMatindok")
+const { selectTbTagsMatindok } = require("../../query/matindok/selectTbTagsMatindok")
+const { selectActiveAlarmMatindok } = require("../../query/matindok/selectActiveAlarm")
+const { updateActiveAlarmMatindok } = require("../../query/matindok/updateActiveAlarm")
+const { deleteActiveAlarmMatindok } = require("../../query/matindok/deleteActiveAlarm")
+const { insertActiveAlarmMatindok } = require("../../query/matindok/insertActiveAlarm")
 
 const processInsertOrDeleteActiveAlarm = async () => {
 
