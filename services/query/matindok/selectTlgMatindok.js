@@ -1,9 +1,9 @@
 const { poolMatindok } = require("../../pool/poolMatindok");
 
-const selectTlgL01Matindok = (yy, gte, lte) => {
+const selectTlgL01Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l01_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l01_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -13,10 +13,10 @@ const selectTlgL01Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL02Matindok = (yy, gte, lte) => {
+const selectTlgL02Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l02_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l02_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -26,10 +26,10 @@ const selectTlgL02Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL03Matindok = (yy, gte, lte) => {
+const selectTlgL03Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l03_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l03_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -39,10 +39,10 @@ const selectTlgL03Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL04Matindok = (yy, gte, lte) => {
+const selectTlgL04Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l04_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l04_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -52,10 +52,10 @@ const selectTlgL04Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL05Matindok = (yy, gte, lte) => {
+const selectTlgL05Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l05_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l05_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -65,10 +65,10 @@ const selectTlgL05Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL06Matindok = (yy, gte, lte) => {
+const selectTlgL06Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l06_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l06_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -78,10 +78,10 @@ const selectTlgL06Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL10Matindok = (yy, gte, lte) => {
+const selectTlgL10Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l10_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l10_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -91,10 +91,10 @@ const selectTlgL10Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL11Matindok = (yy, gte, lte) => {
+const selectTlgL11Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l11_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l11_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -104,10 +104,10 @@ const selectTlgL11Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL12Matindok = (yy, gte, lte) => {
+const selectTlgL12Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l12_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l12_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -117,10 +117,10 @@ const selectTlgL12Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL13Matindok = (yy, gte, lte) => {
+const selectTlgL13Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l13_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l13_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -130,10 +130,10 @@ const selectTlgL13Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL14Matindok = (yy, gte, lte) => {
+const selectTlgL14Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l14_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l14_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -143,10 +143,10 @@ const selectTlgL14Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL19Matindok = (yy, gte, lte) => {
+const selectTlgL19Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l19_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l19_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -156,10 +156,10 @@ const selectTlgL19Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL20Matindok = (yy, gte, lte) => {
+const selectTlgL20Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l20_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l20_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -169,10 +169,10 @@ const selectTlgL20Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL21Matindok = (yy, gte, lte) => {
+const selectTlgL21Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l21_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l21_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -182,10 +182,10 @@ const selectTlgL21Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL22Matindok = (yy, gte, lte) => {
+const selectTlgL22Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l22_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l22_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -195,10 +195,10 @@ const selectTlgL22Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL23Matindok = (yy, gte, lte) => {
+const selectTlgL23Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l23_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l23_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -208,10 +208,10 @@ const selectTlgL23Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL24Matindok = (yy, gte, lte) => {
+const selectTlgL24Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l24_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l24_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -221,10 +221,10 @@ const selectTlgL24Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL26Matindok = (yy, gte, lte) => {
+const selectTlgL26Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l26_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l26_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -234,10 +234,10 @@ const selectTlgL26Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL29Matindok = (yy, gte, lte) => {
+const selectTlgL29Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l29_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l29_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -247,10 +247,10 @@ const selectTlgL29Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL30Matindok = (yy, gte, lte) => {
+const selectTlgL30Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l30_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l30_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -260,10 +260,10 @@ const selectTlgL30Matindok = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL33Matindok = (yy, gte, lte) => {
+const selectTlgL33Matindok = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l33_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolMatindok.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l33_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolMatindok.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }

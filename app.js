@@ -72,60 +72,60 @@ app.use('/api/matindok', getRealtimeMatindok);
 app.use('/api/matindok', getTlgMatindok);
 
 // Cron job to run every 5 seconds
-cron.schedule('*/5 * * * * *', () => {
-    // Call the postAlgDonggi function inside the cron job
+// cron.schedule('*/5 * * * * *', () => {
+//     // Call the postAlgDonggi function inside the cron job
 
-    // GENERAL SCOPE
-    processInsertOrDeleteActiveAlarm()
+//     // GENERAL SCOPE
+//     processInsertOrDeleteActiveAlarm()
 
-    // DONGGI SCOPE
-    processInsertHistoryAlarmDonggi()
-    processInsertTlgL102Donggi()
-    processInsertTlgL103Donggi()
-    processInsertTlgL104Donggi()
-    processInsertTlgL105Donggi()
-    processInsertTlgL202Donggi()
-    processInsertTlgL203Donggi()
-    processInsertTlgL204Donggi()
-    processInsertTlgL205Donggi()
-    processInsertTlgL209Donggi()
-    processInsertTlgL210Donggi()
-    processInsertTlgL212Donggi()
-    processInsertTlgL213Donggi()
-    processInsertTlgL215Donggi()
-    processInsertTlgL216Donggi()
-    processInsertTlgL217Donggi()
-    processInsertTlgL219Donggi()
-    processInsertTlgL220Donggi()
-    processInsertTlgL221Donggi()
-    processInsertTlgL223Donggi()
-    processInsertTlgL224Donggi()
+//     // DONGGI SCOPE
+//     processInsertHistoryAlarmDonggi()
+//     processInsertTlgL102Donggi()
+//     processInsertTlgL103Donggi()
+//     processInsertTlgL104Donggi()
+//     processInsertTlgL105Donggi()
+//     processInsertTlgL202Donggi()
+//     processInsertTlgL203Donggi()
+//     processInsertTlgL204Donggi()
+//     processInsertTlgL205Donggi()
+//     processInsertTlgL209Donggi()
+//     processInsertTlgL210Donggi()
+//     processInsertTlgL212Donggi()
+//     processInsertTlgL213Donggi()
+//     processInsertTlgL215Donggi()
+//     processInsertTlgL216Donggi()
+//     processInsertTlgL217Donggi()
+//     processInsertTlgL219Donggi()
+//     processInsertTlgL220Donggi()
+//     processInsertTlgL221Donggi()
+//     processInsertTlgL223Donggi()
+//     processInsertTlgL224Donggi()
 
-    // MATINDOK SCOPE
-    processInsertHistoryAlarmMatindok()
-    processInsertTlgL01Matindok()
-    processInsertTlgL02Matindok()
-    processInsertTlgL03Matindok()
-    processInsertTlgL04Matindok()
-    processInsertTlgL05Matindok()
-    processInsertTlgL06Matindok()
-    processInsertTlgL10Matindok()
-    processInsertTlgL11Matindok()
-    processInsertTlgL12Matindok()
-    processInsertTlgL13Matindok()
-    processInsertTlgL14Matindok()
-    processInsertTlgL19Matindok()
-    processInsertTlgL20Matindok()
-    processInsertTlgL21Matindok()
-    processInsertTlgL22Matindok()
-    processInsertTlgL23Matindok()
-    processInsertTlgL24Matindok()
-    processInsertTlgL26Matindok()
-    processInsertTlgL29Matindok()
-    processInsertTlgL30Matindok()
-    processInsertTlgL33Matindok()
+//     // MATINDOK SCOPE
+//     processInsertHistoryAlarmMatindok()
+//     processInsertTlgL01Matindok()
+//     processInsertTlgL02Matindok()
+//     processInsertTlgL03Matindok()
+//     processInsertTlgL04Matindok()
+//     processInsertTlgL05Matindok()
+//     processInsertTlgL06Matindok()
+//     processInsertTlgL10Matindok()
+//     processInsertTlgL11Matindok()
+//     processInsertTlgL12Matindok()
+//     processInsertTlgL13Matindok()
+//     processInsertTlgL14Matindok()
+//     processInsertTlgL19Matindok()
+//     processInsertTlgL20Matindok()
+//     processInsertTlgL21Matindok()
+//     processInsertTlgL22Matindok()
+//     processInsertTlgL23Matindok()
+//     processInsertTlgL24Matindok()
+//     processInsertTlgL26Matindok()
+//     processInsertTlgL29Matindok()
+//     processInsertTlgL30Matindok()
+//     processInsertTlgL33Matindok()
 
-});
+// });
 
 // Start the Express server
 app.listen(port, () => {

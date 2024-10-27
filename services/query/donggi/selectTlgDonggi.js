@@ -1,10 +1,10 @@
 const { poolDonggi } = require("../../pool/poolDonggi");
 
-const selectTlgL102Donggi = (yy, gte, lte) => {
+const selectTlgL102Donggi = (yy, gte, lte, offset, limit) => {
 
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l102_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l102_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -13,23 +13,10 @@ const selectTlgL102Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL103Donggi = (yy, gte, lte) => {
+const selectTlgL103Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l103_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
-            if (error) {
-                return reject(error);
-            }
-
-            resolve(results);
-        });
-    });
-}
-
-const selectTlgL104Donggi = (yy, gte, lte) => {
-    return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l104_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l103_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -39,10 +26,10 @@ const selectTlgL104Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL105Donggi = (yy, gte, lte) => {
+const selectTlgL104Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l105_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l104_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -52,10 +39,10 @@ const selectTlgL105Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL202Donggi = (yy, gte, lte) => {
+const selectTlgL105Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l202_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l105_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -65,10 +52,10 @@ const selectTlgL202Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL203Donggi = (yy, gte, lte) => {
+const selectTlgL202Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l203_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l202_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -78,10 +65,10 @@ const selectTlgL203Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL204Donggi = (yy, gte, lte) => {
+const selectTlgL203Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l204_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l203_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -91,10 +78,10 @@ const selectTlgL204Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL205Donggi = (yy, gte, lte) => {
+const selectTlgL204Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l205_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l204_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -104,10 +91,10 @@ const selectTlgL205Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL209Donggi = (yy, gte, lte) => {
+const selectTlgL205Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l209_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l205_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -117,10 +104,10 @@ const selectTlgL209Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL210Donggi = (yy, gte, lte) => {
+const selectTlgL209Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l210_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l209_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -130,10 +117,10 @@ const selectTlgL210Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL212Donggi = (yy, gte, lte) => {
+const selectTlgL210Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l212_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l210_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -143,10 +130,10 @@ const selectTlgL212Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL213Donggi = (yy, gte, lte) => {
+const selectTlgL212Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l213_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l212_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -156,10 +143,10 @@ const selectTlgL213Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL215Donggi = (yy, gte, lte) => {
+const selectTlgL213Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l215_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l213_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -169,10 +156,10 @@ const selectTlgL215Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL216Donggi = (yy, gte, lte) => {
+const selectTlgL215Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l216_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l215_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -182,10 +169,10 @@ const selectTlgL216Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL217Donggi = (yy, gte, lte) => {
+const selectTlgL216Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l217_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l216_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -195,10 +182,10 @@ const selectTlgL217Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL219Donggi = (yy, gte, lte) => {
+const selectTlgL217Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l219_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l217_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -208,10 +195,10 @@ const selectTlgL219Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL220Donggi = (yy, gte, lte) => {
+const selectTlgL219Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l220_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l219_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -221,10 +208,10 @@ const selectTlgL220Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL221Donggi = (yy, gte, lte) => {
+const selectTlgL220Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l221_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l220_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -234,10 +221,10 @@ const selectTlgL221Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL223Donggi = (yy, gte, lte) => {
+const selectTlgL221Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l223_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l221_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -247,10 +234,23 @@ const selectTlgL223Donggi = (yy, gte, lte) => {
     });
 }
 
-const selectTlgL224Donggi = (yy, gte, lte) => {
+const selectTlgL223Donggi = (yy, gte, lte, offset, limit) => {
     return new Promise((resolve, reject) => {
-        const query = `SELECT * FROM tlg_l224_${yy} WHERE (timestamp >= ? AND timestamp <= ?)`;
-        poolDonggi.query(query, [gte, lte], (error, results) => {
+        const query = `SELECT * FROM tlg_l223_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
+            if (error) {
+                return reject(error);
+            }
+
+            resolve(results);
+        });
+    });
+}
+
+const selectTlgL224Donggi = (yy, gte, lte, offset, limit) => {
+    return new Promise((resolve, reject) => {
+        const query = `SELECT * FROM tlg_l224_${yy} WHERE (timestamp >= ? AND timestamp <= ?) ORDER BY TIMESTAMP DESC LIMIT ? OFFSET ?`;
+        poolDonggi.query(query, [gte, lte, limit, offset], (error, results) => {
             if (error) {
                 return reject(error);
             }
