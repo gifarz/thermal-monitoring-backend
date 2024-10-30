@@ -8,7 +8,7 @@ const checkExistTable = (db_name, table_name) => {
             WHERE table_schema = '${db_name}' 
             AND table_name = '${table_name}';
         `;
-        poolDonggi.query(query, (error, results) => { // Not problem if the db_name is Matindok using Donggi
+        poolDonggi.query(query, (error, results) => {
             if (error) {
                 return reject(error);
             }

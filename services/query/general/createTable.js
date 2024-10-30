@@ -8,7 +8,7 @@ const createTable = (db_name, table_name, column) => {
         `;
 
         db_name == 'donggi_' ?
-        poolDonggi.query(query, (error, results) => { // Not problem if the db_name is Matindok using Donggi
+        poolDonggi.query(query, (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -16,7 +16,7 @@ const createTable = (db_name, table_name, column) => {
             resolve(results);
         })
         :
-        poolMatindok.query(query, (error, results) => { // Not problem if the db_name is Matindok using Donggi
+        poolMatindok.query(query, (error, results) => {
             if (error) {
                 return reject(error);
             }
