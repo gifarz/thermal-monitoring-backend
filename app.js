@@ -56,6 +56,10 @@ const processInsertTlgL33Matindok = require('./services/scheduler/matindok/proce
 // GENERAL SITE
 const processInsertOrDeleteActiveAlarm = require('./services/scheduler/general/processInsertOrDeleteActiveAlarm');
 
+// USER
+const getAllUser = require('./routes/user/getAllUser')
+const getUserByUsername = require('./routes/user/getUserByUsername')
+const getSecretKeyByName = require('./routes/user/getSecretKeyByName')
 
 const app = express();
 const port = 3003;
@@ -70,6 +74,10 @@ app.use('/api/donggi', getTlgDonggi);
 
 app.use('/api/matindok', getRealtimeMatindok);
 app.use('/api/matindok', getTlgMatindok);
+
+app.use('/api/user', getAllUser);
+app.use('/api/user', getUserByUsername);
+app.use('/api/user', getSecretKeyByName);
 
 // Cron job to run every 5 seconds
 // cron.schedule('*/5 * * * * *', () => {
