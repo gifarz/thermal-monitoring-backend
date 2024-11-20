@@ -87,7 +87,7 @@ cron.schedule('*/5 * * * * *', () => {
     processInsertOrDeleteActiveAlarm()
 
     // DONGGI SCOPE
-    // processInsertHistoryAlarmDonggi()
+    processInsertHistoryAlarmDonggi()
     // processInsertTlgL102Donggi()
     // processInsertTlgL103Donggi()
     // processInsertTlgL104Donggi()
@@ -110,7 +110,7 @@ cron.schedule('*/5 * * * * *', () => {
     // processInsertTlgL224Donggi()
 
     // MATINDOK SCOPE
-    // processInsertHistoryAlarmMatindok()
+    processInsertHistoryAlarmMatindok()
     // processInsertTlgL01Matindok()
     // processInsertTlgL02Matindok()
     // processInsertTlgL03Matindok()
